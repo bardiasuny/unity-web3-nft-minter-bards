@@ -7,21 +7,31 @@ using MoralisUnity.Web3Api.Models;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[SerializeField]
+
+[System.Serializable]
+public class Attr
+{
+    public object id;
+    public string trait_type;
+    public string value;
+    public string rarity;
+    public string character;
+}
+
+[System.Serializable]
 public class NftMetadata
 {
+    public string hash;
+    public int edition;
+    public long date;
     public string name;
-    public string description;
     public string image;
-    public string attributes;
-
+    public string character;
+    public List<Attr> attributes;
 }
 
 public class PlayerInventory : Inventory
 {
-
-  
-
     protected override void Awake()
     {
         base.Awake();
@@ -38,14 +48,11 @@ public class PlayerInventory : Inventory
 
     private void OpenInvetory()
     {
-    
-
         print("truning uion");
        // ActivatePanel(true);
         Opened?.Invoke();
 
         LoadPurchasedNfts();
-
     }
 
     private async void LoadPurchasedNfts()
@@ -58,6 +65,8 @@ public class PlayerInventory : Inventory
             NftOwnerCollection noc = await Moralis.Web3Api.Account.GetNFTsForContract(playerAddress.ToLower(), GameManager.ContractAddress.ToLower(), GameManager.ContractChain);
 
             List<NftOwner> nftOwners = noc.Result;
+
+            print(noc.ToJson());
 
             if (!nftOwners.Any())
             {
@@ -76,7 +85,7 @@ public class PlayerInventory : Inventory
                 var nftMetaData = nftOwner.Metadata;
                 NftMetadata formattedMetaData = JsonUtility.FromJson<NftMetadata>(nftMetaData);
 
-                print(formattedMetaData.attributes.ToString());
+
 
                 PopulatePlayerItems(nftOwner.TokenId, formattedMetaData);
             }
@@ -85,7 +94,6 @@ public class PlayerInventory : Inventory
         {
              Debug.LogError(exp.Message);
         }
-
     }
 
     private void PopulatePlayerItems(string tokenId, NftMetadata data)

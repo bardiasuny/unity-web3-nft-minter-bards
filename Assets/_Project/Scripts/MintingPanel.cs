@@ -13,12 +13,11 @@ namespace NFT_Minter
     public class MintingPanel : MonoBehaviour
     {
         [Header("Smart Contract Data")]
-        private string contractAddress;
-        private string contractAbi;
+        public string contractAddress;
+        public string contractAbi;
         [SerializeField] private string contractFunction;
 
-        private BigInteger _currentTokenId;
-         
+      
         [Header("NFT Metadata")]
         [SerializeField] private string metadataUrl;
 
@@ -62,16 +61,11 @@ namespace NFT_Minter
                 return;
             }
 
-            if (metadataUrl == string.Empty)
-            {
-                Debug.LogError("Metadata URL is empty");
-                return;
-            }
             
             statusText.text = "Please confirm transaction in your wallet";
             mintButton.interactable = false;
         
-            var result = await ExecuteMinting(1);
+            var result = await ExecuteMinting(3);
 
             if (result is null)
             {
@@ -83,7 +77,6 @@ namespace NFT_Minter
             // We tell the GameManager what we minted the item successfully
             statusText.text = "Transaction completed!";
             Debug.Log($"Token Contract Address: {contractAddress}");
-            Debug.Log($"Token ID: {_currentTokenId}");
             
             // Activate OpenSea button
             mintButton.gameObject.SetActive(false);
@@ -100,11 +93,11 @@ namespace NFT_Minter
 
             // Set gas configuration. If you set it at 0, your wallet will use its default gas configuration
             HexBigInteger value = new(0);
-            HexBigInteger gas = new(21000000);
+            HexBigInteger gas = new(0);
             HexBigInteger gasPrice = new(0);
 
 
-            string resp = await Moralis.ExecuteContractFunction(GameManager.ContractAddress, GameManager.ContractAbi, contractFunction, parameters, value, gas, gasPrice);
+            string resp = await Moralis.ExecuteContractFunction(contractAddress, contractAbi, contractFunction, parameters, value, gas, gasPrice);
 
 
             

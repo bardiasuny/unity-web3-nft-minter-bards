@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using MoralisUnity.Platform.Objects;
 using TMPro;
 using UnityEngine;
@@ -10,10 +11,13 @@ using UnityEngine.UI;
 
 public class ItemData : MoralisObject
 {
+    public string hash { get; set; }
+    public int edition { get; set; }
+    public long date { get; set; }
     public string name { get; set; }
-    public string description { get; set; }
     public string imageUrl { get; set; }
-    public string attributes { get; set; }
+    public string character { get; set; }
+    public List<Attr> attributes { get; set; }
 
     public ItemData() : base("ItemData") { }
 }
@@ -23,6 +27,8 @@ public class InventoryItem : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] private Image myIcon;
     [SerializeField] private TextMeshProUGUI nftNameText;
+    [SerializeField] private TextMeshProUGUI attribute1Text;
+
 
     [SerializeField] private Button myButton;
 
@@ -56,11 +62,14 @@ public class InventoryItem : MonoBehaviour
         {
             objectId = tokenId,
             name = nftMetadata.name,
-            description = nftMetadata.description,
             imageUrl = nftMetadata.image,
             attributes = nftMetadata.attributes
         };
         nftNameText.text = _itemData.name;
+        attribute1Text.text = _itemData.attributes[7].trait_type.ToString() + _itemData.attributes[7].value.ToString();
+        Attr staminaObj = _itemData.attributes.Find(x => x.trait_type == "Stamina");
+        attribute1Text.text = staminaObj.trait_type + staminaObj.value;
+
         StartCoroutine(GetTexture(_itemData.imageUrl));
     }
 

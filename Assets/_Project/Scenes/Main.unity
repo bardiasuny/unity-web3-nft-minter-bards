@@ -822,6 +822,175 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 249a24a20afaf53498a09c25e1b37fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contractAddress: 0x833B9112F9bAA699B035D5a47157EAB561B7Cd68
+  contractAbi: "[ \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"address[]\",
+    \t\t\t\t\"name\": \"_addresses\", \t\t\t\t\"type\": \"address[]\" \t\t\t} \t\t],
+    \t\t\"name\": \"addOGWhitelist\", \t\t\"outputs\": [], \t\t\"stateMutability\":
+    \"nonpayable\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{
+    \t\t\t\t\"internalType\": \"address[]\", \t\t\t\t\"name\": \"_addresses\", \t\t\t\t\"type\":
+    \"address[]\" \t\t\t} \t\t], \t\t\"name\": \"addWhitelist\", \t\t\"outputs\":
+    [], \t\t\"stateMutability\": \"nonpayable\", \t\t\"type\": \"function\" \t},
+    \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\":
+    \"_quantity\", \t\t\t\t\"type\": \"uint256\" \t\t\t}, \t\t\t{ \t\t\t\t\"internalType\":
+    \"address\", \t\t\t\t\"name\": \"_to\", \t\t\t\t\"type\": \"address\" \t\t\t}
+    \t\t], \t\t\"name\": \"airDrop\", \t\t\"outputs\": [], \t\t\"stateMutability\":
+    \"nonpayable\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [], \t\t\"stateMutability\":
+    \"nonpayable\", \t\t\"type\": \"constructor\" \t}, \t{ \t\t\"anonymous\": false,
+    \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"indexed\": true, \t\t\t\t\"internalType\":
+    \"address\", \t\t\t\t\"name\": \"owner\", \t\t\t\t\"type\": \"address\" \t\t\t},
+    \t\t\t{ \t\t\t\t\"indexed\": true, \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\":
+    \"approved\", \t\t\t\t\"type\": \"address\" \t\t\t}, \t\t\t{ \t\t\t\t\"indexed\":
+    true, \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\": \"tokenId\", \t\t\t\t\"type\":
+    \"uint256\" \t\t\t} \t\t], \t\t\"name\": \"Approval\", \t\t\"type\": \"event\"
+    \t}, \t{ \t\t\"anonymous\": false, \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"indexed\":
+    true, \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\": \"owner\", \t\t\t\t\"type\":
+    \"address\" \t\t\t}, \t\t\t{ \t\t\t\t\"indexed\": true, \t\t\t\t\"internalType\":
+    \"address\", \t\t\t\t\"name\": \"operator\", \t\t\t\t\"type\": \"address\" \t\t\t},
+    \t\t\t{ \t\t\t\t\"indexed\": false, \t\t\t\t\"internalType\": \"bool\", \t\t\t\t\"name\":
+    \"approved\", \t\t\t\t\"type\": \"bool\" \t\t\t} \t\t], \t\t\"name\": \"ApprovalForAll\",
+    \t\t\"type\": \"event\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\":
+    \"address\", \t\t\t\t\"name\": \"to\", \t\t\t\t\"type\": \"address\" \t\t\t},
+    \t\t\t{ \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\": \"tokenId\",
+    \t\t\t\t\"type\": \"uint256\" \t\t\t} \t\t], \t\t\"name\": \"approve\", \t\t\"outputs\":
+    [], \t\t\"stateMutability\": \"nonpayable\", \t\t\"type\": \"function\" \t},
+    \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"address[]\", \t\t\t\t\"name\":
+    \"_addresses\", \t\t\t\t\"type\": \"address[]\" \t\t\t} \t\t], \t\t\"name\":
+    \"bulkAirDrop\", \t\t\"outputs\": [], \t\t\"stateMutability\": \"nonpayable\",
+    \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\":
+    \"bool\", \t\t\t\t\"name\": \"_isPaused\", \t\t\t\t\"type\": \"bool\" \t\t\t}
+    \t\t], \t\t\"name\": \"contractState\", \t\t\"outputs\": [], \t\t\"stateMutability\":
+    \"nonpayable\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{
+    \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\": \"_quantity\", \t\t\t\t\"type\":
+    \"uint256\" \t\t\t} \t\t], \t\t\"name\": \"mint\", \t\t\"outputs\": [], \t\t\"stateMutability\":
+    \"payable\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"anonymous\": false, \t\t\"inputs\":
+    [ \t\t\t{ \t\t\t\t\"indexed\": true, \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\":
+    \"tokenId\", \t\t\t\t\"type\": \"uint256\" \t\t\t}, \t\t\t{ \t\t\t\t\"indexed\":
+    true, \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\": \"nftContract\",
+    \t\t\t\t\"type\": \"address\" \t\t\t}, \t\t\t{ \t\t\t\t\"indexed\": true, \t\t\t\t\"internalType\":
+    \"address\", \t\t\t\t\"name\": \"creator\", \t\t\t\t\"type\": \"address\" \t\t\t}
+    \t\t], \t\t\"name\": \"NFTCreated\", \t\t\"type\": \"event\" \t}, \t{ \t\t\"anonymous\":
+    false, \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"indexed\": true, \t\t\t\t\"internalType\":
+    \"address\", \t\t\t\t\"name\": \"previousOwner\", \t\t\t\t\"type\": \"address\"
+    \t\t\t}, \t\t\t{ \t\t\t\t\"indexed\": true, \t\t\t\t\"internalType\": \"address\",
+    \t\t\t\t\"name\": \"newOwner\", \t\t\t\t\"type\": \"address\" \t\t\t} \t\t],
+    \t\t\"name\": \"OwnershipTransferred\", \t\t\"type\": \"event\" \t}, \t{ \t\t\"inputs\":
+    [], \t\t\"name\": \"renounceOwnership\", \t\t\"outputs\": [], \t\t\"stateMutability\":
+    \"nonpayable\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [], \t\t\"name\":
+    \"reveal\", \t\t\"outputs\": [], \t\t\"stateMutability\": \"nonpayable\", \t\t\"type\":
+    \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"address\",
+    \t\t\t\t\"name\": \"from\", \t\t\t\t\"type\": \"address\" \t\t\t}, \t\t\t{ \t\t\t\t\"internalType\":
+    \"address\", \t\t\t\t\"name\": \"to\", \t\t\t\t\"type\": \"address\" \t\t\t},
+    \t\t\t{ \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\": \"tokenId\",
+    \t\t\t\t\"type\": \"uint256\" \t\t\t} \t\t], \t\t\"name\": \"safeTransferFrom\",
+    \t\t\"outputs\": [], \t\t\"stateMutability\": \"nonpayable\", \t\t\"type\": \"function\"
+    \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\":
+    \"from\", \t\t\t\t\"type\": \"address\" \t\t\t}, \t\t\t{ \t\t\t\t\"internalType\":
+    \"address\", \t\t\t\t\"name\": \"to\", \t\t\t\t\"type\": \"address\" \t\t\t},
+    \t\t\t{ \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\": \"tokenId\",
+    \t\t\t\t\"type\": \"uint256\" \t\t\t}, \t\t\t{ \t\t\t\t\"internalType\": \"bytes\",
+    \t\t\t\t\"name\": \"_data\", \t\t\t\t\"type\": \"bytes\" \t\t\t} \t\t], \t\t\"name\":
+    \"safeTransferFrom\", \t\t\"outputs\": [], \t\t\"stateMutability\": \"nonpayable\",
+    \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\":
+    \"address\", \t\t\t\t\"name\": \"operator\", \t\t\t\t\"type\": \"address\" \t\t\t},
+    \t\t\t{ \t\t\t\t\"internalType\": \"bool\", \t\t\t\t\"name\": \"approved\", \t\t\t\t\"type\":
+    \"bool\" \t\t\t} \t\t], \t\t\"name\": \"setApprovalForAll\", \t\t\"outputs\":
+    [], \t\t\"stateMutability\": \"nonpayable\", \t\t\"type\": \"function\" \t},
+    \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"string\", \t\t\t\t\"name\":
+    \"_newBaseExtension\", \t\t\t\t\"type\": \"string\" \t\t\t} \t\t], \t\t\"name\":
+    \"setBaseExtension\", \t\t\"outputs\": [], \t\t\"stateMutability\": \"nonpayable\",
+    \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\":
+    \"string\", \t\t\t\t\"name\": \"_newBaseURI\", \t\t\t\t\"type\": \"string\" \t\t\t}
+    \t\t], \t\t\"name\": \"setBaseURI\", \t\t\"outputs\": [], \t\t\"stateMutability\":
+    \"nonpayable\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{
+    \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\": \"_newCost\", \t\t\t\t\"type\":
+    \"uint256\" \t\t\t} \t\t], \t\t\"name\": \"setCost\", \t\t\"outputs\": [], \t\t\"stateMutability\":
+    \"nonpayable\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{
+    \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\": \"_newmaxMintAmount\",
+    \t\t\t\t\"type\": \"uint256\" \t\t\t} \t\t], \t\t\"name\": \"setMaxMintAmount\",
+    \t\t\"outputs\": [], \t\t\"stateMutability\": \"nonpayable\", \t\t\"type\": \"function\"
+    \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"string\", \t\t\t\t\"name\":
+    \"_notRevealedURI\", \t\t\t\t\"type\": \"string\" \t\t\t} \t\t], \t\t\"name\":
+    \"setNotRevealedURI\", \t\t\"outputs\": [], \t\t\"stateMutability\": \"nonpayable\",
+    \t\t\"type\": \"function\" \t}, \t{ \t\t\"anonymous\": false, \t\t\"inputs\":
+    [ \t\t\t{ \t\t\t\t\"indexed\": true, \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\":
+    \"from\", \t\t\t\t\"type\": \"address\" \t\t\t}, \t\t\t{ \t\t\t\t\"indexed\":
+    true, \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\": \"to\", \t\t\t\t\"type\":
+    \"address\" \t\t\t}, \t\t\t{ \t\t\t\t\"indexed\": true, \t\t\t\t\"internalType\":
+    \"uint256\", \t\t\t\t\"name\": \"tokenId\", \t\t\t\t\"type\": \"uint256\" \t\t\t}
+    \t\t], \t\t\"name\": \"Transfer\", \t\t\"type\": \"event\" \t}, \t{ \t\t\"inputs\":
+    [ \t\t\t{ \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\": \"from\",
+    \t\t\t\t\"type\": \"address\" \t\t\t}, \t\t\t{ \t\t\t\t\"internalType\": \"address\",
+    \t\t\t\t\"name\": \"to\", \t\t\t\t\"type\": \"address\" \t\t\t}, \t\t\t{ \t\t\t\t\"internalType\":
+    \"uint256\", \t\t\t\t\"name\": \"tokenId\", \t\t\t\t\"type\": \"uint256\" \t\t\t}
+    \t\t], \t\t\"name\": \"transferFrom\", \t\t\"outputs\": [], \t\t\"stateMutability\":
+    \"nonpayable\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{
+    \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\": \"newOwner\", \t\t\t\t\"type\":
+    \"address\" \t\t\t} \t\t], \t\t\"name\": \"transferOwnership\", \t\t\"outputs\":
+    [], \t\t\"stateMutability\": \"nonpayable\", \t\t\"type\": \"function\" \t},
+    \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\":
+    \"owner\", \t\t\t\t\"type\": \"address\" \t\t\t} \t\t], \t\t\"name\": \"balanceOf\",
+    \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\":
+    \"\", \t\t\t\t\"type\": \"uint256\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\",
+    \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [], \t\t\"name\": \"baseExtension\",
+    \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"string\", \t\t\t\t\"name\":
+    \"\", \t\t\t\t\"type\": \"string\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\",
+    \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\":
+    \"address\", \t\t\t\t\"name\": \"_address\", \t\t\t\t\"type\": \"address\" \t\t\t}
+    \t\t], \t\t\"name\": \"getAddressMaxMint\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\":
+    \"uint32\", \t\t\t\t\"name\": \"\", \t\t\t\t\"type\": \"uint32\" \t\t\t} \t\t],
+    \t\t\"stateMutability\": \"view\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\":
+    [ \t\t\t{ \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\": \"tokenId\",
+    \t\t\t\t\"type\": \"uint256\" \t\t\t} \t\t], \t\t\"name\": \"getApproved\", \t\t\"outputs\":
+    [ \t\t\t{ \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\": \"\", \t\t\t\t\"type\":
+    \"address\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\", \t\t\"type\": \"function\"
+    \t}, \t{ \t\t\"inputs\": [], \t\t\"name\": \"getCurrentTokenId\", \t\t\"outputs\":
+    [ \t\t\t{ \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\": \"\", \t\t\t\t\"type\":
+    \"uint256\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\", \t\t\"type\": \"function\"
+    \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\":
+    \"owner\", \t\t\t\t\"type\": \"address\" \t\t\t}, \t\t\t{ \t\t\t\t\"internalType\":
+    \"address\", \t\t\t\t\"name\": \"operator\", \t\t\t\t\"type\": \"address\" \t\t\t}
+    \t\t], \t\t\"name\": \"isApprovedForAll\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\":
+    \"bool\", \t\t\t\t\"name\": \"\", \t\t\t\t\"type\": \"bool\" \t\t\t} \t\t], \t\t\"stateMutability\":
+    \"view\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [], \t\t\"name\":
+    \"isPaused\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"bool\",
+    \t\t\t\t\"name\": \"\", \t\t\t\t\"type\": \"bool\" \t\t\t} \t\t], \t\t\"stateMutability\":
+    \"view\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [], \t\t\"name\":
+    \"name\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"string\", \t\t\t\t\"name\":
+    \"\", \t\t\t\t\"type\": \"string\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\",
+    \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [], \t\t\"name\": \"owner\",
+    \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\":
+    \"\", \t\t\t\t\"type\": \"address\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\",
+    \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\":
+    \"uint256\", \t\t\t\t\"name\": \"tokenId\", \t\t\t\t\"type\": \"uint256\" \t\t\t}
+    \t\t], \t\t\"name\": \"ownerOf\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\":
+    \"address\", \t\t\t\t\"name\": \"\", \t\t\t\t\"type\": \"address\" \t\t\t} \t\t],
+    \t\t\"stateMutability\": \"view\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\":
+    [ \t\t\t{ \t\t\t\t\"internalType\": \"bytes4\", \t\t\t\t\"name\": \"interfaceId\",
+    \t\t\t\t\"type\": \"bytes4\" \t\t\t} \t\t], \t\t\"name\": \"supportsInterface\",
+    \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"bool\", \t\t\t\t\"name\":
+    \"\", \t\t\t\t\"type\": \"bool\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\",
+    \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [], \t\t\"name\": \"symbol\",
+    \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"string\", \t\t\t\t\"name\":
+    \"\", \t\t\t\t\"type\": \"string\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\",
+    \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\":
+    \"uint256\", \t\t\t\t\"name\": \"index\", \t\t\t\t\"type\": \"uint256\" \t\t\t}
+    \t\t], \t\t\"name\": \"tokenByIndex\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\":
+    \"uint256\", \t\t\t\t\"name\": \"tokenId\", \t\t\t\t\"type\": \"uint256\" \t\t\t}
+    \t\t], \t\t\"stateMutability\": \"view\", \t\t\"type\": \"function\" \t}, \t{
+    \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"address\", \t\t\t\t\"name\":
+    \"owner\", \t\t\t\t\"type\": \"address\" \t\t\t}, \t\t\t{ \t\t\t\t\"internalType\":
+    \"uint256\", \t\t\t\t\"name\": \"index\", \t\t\t\t\"type\": \"uint256\" \t\t\t}
+    \t\t], \t\t\"name\": \"tokenOfOwnerByIndex\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\":
+    \"uint256\", \t\t\t\t\"name\": \"tokenId\", \t\t\t\t\"type\": \"uint256\" \t\t\t}
+    \t\t], \t\t\"stateMutability\": \"view\", \t\t\"type\": \"function\" \t}, \t{
+    \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\":
+    \"tokenId\", \t\t\t\t\"type\": \"uint256\" \t\t\t} \t\t], \t\t\"name\": \"tokenURI\",
+    \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"string\", \t\t\t\t\"name\":
+    \"\", \t\t\t\t\"type\": \"string\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\",
+    \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [], \t\t\"name\": \"totalSupply\",
+    \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\"name\":
+    \"\", \t\t\t\t\"type\": \"uint256\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\",
+    \t\t\"type\": \"function\" \t} ]"
   contractFunction: mint
   metadataUrl: https://ipfs.moralis.io:2053/ipfs/QmdQm7LN1K2RFauJD8kroXSLcmvrgTavidKaZuy5qa1Cfv/MoralisLogo_637922666012574325.json
   metadataUrlText: {fileID: 56110998}
