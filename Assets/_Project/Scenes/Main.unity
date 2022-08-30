@@ -530,7 +530,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1433886331891868861, guid: a3f1cb74f28f7814cbacbebc81bba466, type: 3}
+      - m_Target: {fileID: 308965982}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -541,6 +541,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 309963528}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &262750898
 MonoBehaviour:
@@ -810,7 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 249a24a20afaf53498a09c25e1b37fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contractFunction: mintItem
+  contractFunction: mint
   metadataUrl: https://ipfs.moralis.io:2053/ipfs/QmdQm7LN1K2RFauJD8kroXSLcmvrgTavidKaZuy5qa1Cfv/MoralisLogo_637922666012574325.json
   metadataUrlText: {fileID: 56110998}
   mintButton: {fileID: 1880822578}
@@ -1106,7 +1118,7 @@ PrefabInstance:
     - target: {fileID: 7582086179482937505, guid: a41feed31bcc36541a7a9505212ddc63, type: 3}
       propertyPath: OnConnected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 3036916478597702575, guid: be1ce86f547e34b6d86fa911e3a7fb26, type: 3}
+      objectReference: {fileID: 309963528}
     - target: {fileID: 7582086179482937505, guid: a41feed31bcc36541a7a9505212ddc63, type: 3}
       propertyPath: OnConnected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1142,7 +1154,7 @@ PrefabInstance:
     - target: {fileID: 7582086179482937505, guid: a41feed31bcc36541a7a9505212ddc63, type: 3}
       propertyPath: OnDisconnected.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 309963528}
     - target: {fileID: 7582086179482937505, guid: a41feed31bcc36541a7a9505212ddc63, type: 3}
       propertyPath: OnConnected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
