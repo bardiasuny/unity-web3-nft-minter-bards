@@ -13,8 +13,8 @@ namespace NFT_Minter
     public class MintingPanel : MonoBehaviour
     {
         [Header("Smart Contract Data")]
-        [SerializeField] private string contractAddress;
-        [SerializeField] private string contractAbi;
+        private string contractAddress;
+        private string contractAbi;
         [SerializeField] private string contractFunction;
 
         private BigInteger _currentTokenId;
@@ -27,12 +27,16 @@ namespace NFT_Minter
         [SerializeField] private Button mintButton;
         [SerializeField] private Button openSeaButton;
         [SerializeField] private TextMeshProUGUI statusText;
+
+    
         
         private void OnEnable()
         {
             statusText.text = string.Empty;
-            metadataUrlText.text = metadataUrl;
-        }
+           // metadataUrlText.text = metadataUrl;
+           contractAddress = GameManager.ContractAddress;
+           contractAbi = GameManager.ContractAbi;
+    }
 
         private void OnDisable()
         {
@@ -100,7 +104,7 @@ namespace NFT_Minter
             HexBigInteger gasPrice = new(0);
 
 
-            string resp = await Moralis.ExecuteContractFunction(contractAddress, contractAbi, contractFunction, parameters, value, gas, gasPrice);
+            string resp = await Moralis.ExecuteContractFunction(GameManager.ContractAddress, GameManager.ContractAbi, contractFunction, parameters, value, gas, gasPrice);
 
 
             
@@ -125,7 +129,7 @@ namespace NFT_Minter
 
         public void ViewOnOpenSea()
         {
-            MoralisTools.Web3Tools.ViewNftOnTestnetOpenSea(contractAddress, Moralis.CurrentChain.Name, _currentTokenId.ToString());
+           // MoralisTools.Web3Tools.ViewNftOnTestnetOpenSea(contractAddress, Moralis.CurrentChain.Name, _currentTokenId.ToString());
         }
 
         #endregion

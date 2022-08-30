@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fef308ab711a6439bb086b5265f83e, type: 3}
   m_Name: MoralisServerSettings
   m_EditorClassIdentifier: 
-  DappUrl: https://d2mllk31pvpy.usemoralis.com:2053/server
-  DappId: nkj1lYtwrzmnoruySk4MAEFVN5gmxmNdl54vQzzl
+  DappUrl: https://sif2qo4jm2ok.usemoralis.com:2053/server
+  DappId: BD9jS7JvJ9L2cPd2AncBGXVC37g5azI0J74ACqlD
   DappName: MightyMoralis
   DappDescription: This application provides an example of how to you Moralis in
     a Unity 3D Game
